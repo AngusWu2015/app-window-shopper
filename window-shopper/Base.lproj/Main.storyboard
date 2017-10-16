@@ -50,6 +50,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-Dw-vLW">
+                                <rect key="frame" x="36" y="300" width="303" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75k-pU-yrF">
+                                <rect key="frame" x="166" y="367.5" width="43.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeE-uX-GRS">
+                                <rect key="frame" x="36" y="617" width="303" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RVG-dC-dqz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iWT-S7-CVU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -57,18 +82,28 @@
                             <constraint firstAttribute="trailing" secondItem="fr6-68-Vfi" secondAttribute="trailing" id="4yM-hx-Mut"/>
                             <constraint firstItem="Zfq-lf-gxj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="85U-y8-eOA"/>
                             <constraint firstItem="o3E-gQ-sk8" firstAttribute="top" secondItem="BXL-kd-mqo" secondAttribute="bottom" constant="35" id="CvZ-6T-8t8"/>
+                            <constraint firstItem="kgy-Dw-vLW" firstAttribute="width" secondItem="jMH-tB-B7w" secondAttribute="width" id="EVa-7C-RvY"/>
                             <constraint firstItem="jMH-tB-B7w" firstAttribute="top" secondItem="Zfq-lf-gxj" secondAttribute="bottom" constant="25" id="Eu9-IZ-DcP"/>
                             <constraint firstItem="o3E-gQ-sk8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GLf-2q-KhD"/>
                             <constraint firstItem="Zfq-lf-gxj" firstAttribute="top" secondItem="o3E-gQ-sk8" secondAttribute="bottom" constant="35" id="GYY-hL-I1O"/>
+                            <constraint firstItem="xeE-uX-GRS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="HfS-91-4Bb"/>
                             <constraint firstItem="fr6-68-Vfi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LZX-sM-aB1"/>
                             <constraint firstItem="jMH-tB-B7w" firstAttribute="trailing" secondItem="Zfq-lf-gxj" secondAttribute="trailing" id="MHU-pI-LSy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xeE-uX-GRS" secondAttribute="trailing" constant="20" id="V85-RT-AB6"/>
+                            <constraint firstItem="EOX-Va-DYQ" firstAttribute="top" secondItem="xeE-uX-GRS" secondAttribute="bottom" constant="20" id="WJp-J4-oeA"/>
+                            <constraint firstItem="75k-pU-yrF" firstAttribute="top" secondItem="kgy-Dw-vLW" secondAttribute="bottom" constant="5" id="h8i-p2-E2D"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zfq-lf-gxj" secondAttribute="trailing" constant="20" id="hB0-kH-r9N"/>
+                            <constraint firstItem="kgy-Dw-vLW" firstAttribute="top" secondItem="jMH-tB-B7w" secondAttribute="bottom" constant="45" id="hFR-Hk-Icn"/>
                             <constraint firstItem="EOX-Va-DYQ" firstAttribute="top" secondItem="fr6-68-Vfi" secondAttribute="bottom" id="hgg-X5-N20"/>
+                            <constraint firstItem="75k-pU-yrF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jzW-Bf-O2Q"/>
+                            <constraint firstItem="kgy-Dw-vLW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nms-5h-8rD"/>
                             <constraint firstItem="jMH-tB-B7w" firstAttribute="leading" secondItem="Zfq-lf-gxj" secondAttribute="leading" id="tcp-yZ-PbO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="75k-pU-yrF" id="oF2-Vn-SxG"/>
                         <outlet property="priceTxt" destination="jMH-tB-B7w" id="JH5-26-czD"/>
+                        <outlet property="resultLbl" destination="kgy-Dw-vLW" id="RRC-go-nwo"/>
                         <outlet property="wageTxt" destination="Zfq-lf-gxj" id="54x-4q-s65"/>
                     </connections>
                 </viewController>
